@@ -7,6 +7,7 @@
     <meta name="description" content="CASH es una plataforma digital que simplifica tus finanzas. Controla tus gastos, automatiza tus ahorros y accede a planes personalizados.">
     <link rel="icon" href="assets/images/cash.png" type="image/png">
     <link rel="stylesheet" href="assets/css/styles/style.css">
+    <script src="js/contact.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -22,6 +23,9 @@
                 <li><a href="about.html">Nosotros</a></li>
             </ul>
         </nav>
+        <button id="ThemeBottom" class="cabecera__mode">
+            <img src="assets/images/icons/dark_mode.png" alt="cart" width="10"></img>
+        </button>
         <section class="cabecera__botones">
             <button class="sign_login">Sign In</button>
             <button class="sign_login">Login In</button>
@@ -70,7 +74,7 @@
     
                     <label for="contactoNombre">Nombre:</label>
                     <input type="text" id="contactoNombre" name="nombre" placeholder="Tu nombre" required>
-    
+
                     <label for="contactoApellidos">Apellidos:</label>
                     <input type="text" id="contactoApellidos" name="apellidos" placeholder="Tus apellidos" required>
     
@@ -104,7 +108,7 @@
     
                     <label for="contactoMensaje">Mensaje:</label>
                     <textarea id="contactoMensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
-                    <button type="submit">Enviar mensaje</button>
+                    <button id="contactoSubmit" type="submit">Enviar mensaje</button>
                 </fieldset>
             </form>
         </section>

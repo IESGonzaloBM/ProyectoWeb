@@ -72,6 +72,21 @@ h2 {
     }
 }
 
+/* Clase para el boton de Theme Mode */
+.dark-mode {
+    --color-white: #121212;
+    --color-light-gray: #1f1f1f;
+    --color-medium-gray: #2c2c2c;
+
+    --color-text-primary: #f0f0f0;
+    --color-text-secondary: #bbbbbb;
+
+    --border-color: #444444;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --shadow-color-strong: rgba(255, 255, 255, 0.2);
+    color-scheme: dark;
+}
+
 /* ==================================== */
 /* 2. MEDIA QUERY PARA MÓVILES (Máx. 768px) */
 /* ==================================== */
