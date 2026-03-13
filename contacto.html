@@ -67,8 +67,8 @@
         </section>
         
         <section class="contacto__form">
-            <h2>Formulario de contacto</h2>
-            <form name="form" action="#" method="POST">
+            <h2>Formulario de contacto y Gestor</h2>
+            <form id="contactForm" name="form" action="#" method="POST">
                 <fieldset>
                     <legend>Datos personales</legend>
     
@@ -97,7 +97,7 @@
                 <fieldset>
                     <legend>Motivo del contacto</legend>
     
-                    <label for="contactoAsunto">Asunto:</label>
+                    <label for="contactoAsunto">Asunto (Categoría):</label>
                     <select id="contactoAsunto" name="asunto" required>
                         <option value="">Selecciona una opción</option>
                         <option value="sugerencia">Sugerencia</option>
@@ -105,12 +105,48 @@
                         <option value="denuncia">Denuncia</option>
                         <option value="otros">Otros</option>
                     </select>
+
+                    <label for="contactoEstado">Estado de Urgencia:</label>
+                    <select id="contactoEstado" name="estado" required>
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
     
                     <label for="contactoMensaje">Mensaje:</label>
                     <textarea id="contactoMensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
-                    <button id="contactoSubmit" type="submit">Enviar mensaje</button>
+                    
+                    <button id="contactoSubmit" type="submit">Enviar / Añadir Elemento</button>
+                    <!-- Contenedor para mensajes de éxito/error generales del formulario -->
+                    <div id="formFeedback" style="text-align:center; padding-top: 1rem; font-weight:bold;"></div>
                 </fieldset>
             </form>
+        </section>
+
+        <!-- SECCION DE GESTOR DE ELEMENTOS AÑADIDOS DINAMICOS -->
+        <section class="gestor-elementos">
+            <h2>Elementos Registrados</h2>
+            
+            <div class="gestor-filtros">
+                <label for="filtroCategoria">Filtrar por Asunto:</label>
+                <select id="filtroCategoria">
+                    <option value="todos">Todos</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="problema_tecnico">Problema técnico</option>
+                    <option value="denuncia">Denuncia</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="filtroEstado">Filtrar por Urgencia:</label>
+                <select id="filtroEstado">
+                    <option value="todos">Todos</option>
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+
+            <div class="galeria-elementos" id="galeriaElementos"></div>
         </section>
     </main>
 
